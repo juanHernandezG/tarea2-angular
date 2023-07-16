@@ -1,0 +1,304 @@
+@font-face{
+    font-family: "digital";
+    src: url("DS-DIGIT.TTF") format("truetype");
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bould{
+    background-color: #363940;
+}
+
+.body-block{
+    background-color: #363940;
+    margin: 20px;
+    padding: 0;
+}
+
+#contenedor{
+    background-color: #363940;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0px;
+    height: 100vh;
+    border: 1px solid #5e6063;
+}
+
+h1{
+    color: aliceblue;
+    text-align: center;
+}
+
+h5{
+    color: #ffc75c;
+    text-align: center;
+    font-size: 15px;
+}
+
+#izquierda{
+    float: left;
+    padding: 10px;
+    border: 2px solid #5e6063 ;
+    flex-direction: column;
+    display: flex;
+}
+
+#centro{
+    padding: 10px;
+    border: 2px solid #5e6063 ;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+#derecha{
+    float: right; 
+    padding: 10px;   
+    border: 2px solid #5e6063;
+}
+
+#segundo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#segundo > div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tercero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tercero > div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time-container,#segundo, #tercero, #cuarto{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5e6063;
+}
+
+#time{
+    color: #ffff33;
+    font-family: 'digital';
+    font-size: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+}
+
+#time-game{
+    height: 100px;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 150px;
+    height: 100px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+}
+
+#flecha-izq, #time-game, #flecha-der{
+    border: 1px solid #5e6063;
+}
+
+#time-game p{
+    font-size: 100px;
+}
+
+#time-gm{
+    font-size: 80px;
+}
+
+#time-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+p #nombre{
+  font-size: 1px;  
+}
+
+p{ 
+  color: #ffff;
+  font-size: 100px;
+  padding: 10px;
+  font-family: 'digital';
+}
+
+.num{
+    font-size: 100px;
+    text-align: right;
+    margin-top: 0;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+}
+
+
+#fouls-iz{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#periodo{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#fouls-der{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tiempo-jugada{
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
+
+.jugador{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.etiqueta{
+    margin-right: 10px;
+    background-color: #2c2c2c;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.numero{
+    background-color: #2c2c2c;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 5px;
+    
+}
+
+
+#lista-jugadores{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+}
+
+
+input[ype="radio"]{
+    margin-right: 5px;
+    vertical-align: middle;
+    background-color: red;
+}
+
+.jugador input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background-color: #000;
+    outline: none;
+    margin-right: 5px;
+    vertical-align: middle;
+    position: relative;
+    margin: 0 1px;
+}
+
+.jugador input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(253, 5, 5);
+}
+ 
+
+#flecha-izq .bi.bi-arrow-left {
+    font-size: 24px;
+}
+  
+#fouls-iz, #periodo, #fouls-der {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #5e6063;
+}
+  
+#fouls-iz p, #periodo p, #fouls-der p {
+    margin-bottom: 0;
+    color: white;
+}
+  
+#fouls-iz span, #periodo span, #fouls-der span {
+    margin-top: 5px;
+    color: white;
+}
+  
+.fouls-equipo{
+    background-color: #2c2c2c;
+    border-radius: 10px;
+} 
+
+.tiempo-periodo{
+    background-color: #2c2c2c;
+    border-radius: 10px;
+}
+  
+.flecha-izq{
+    border: 1px solid #5e6063;
+}  
+
+
+  
+
+
+
