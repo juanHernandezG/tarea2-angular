@@ -1,0 +1,81 @@
+
+<html class="bould">
+    <head>
+
+    </head>
+    <body class="body-block">
+        <div id="contenedor">
+            <div id="izquierda">
+                <h1>Local</h1>
+                <h5>ABA ANCUD</h5>
+                <p class="num" (click)="incrementoPunto('local')" >{{puntuacionLocal}}</p>
+                <br>
+                <ul id="lista-jugadores">
+                    <li class="jugador" *ngFor="let jugador of jugadores1">
+                        <span class="etiqueta">{{jugador.nombre}} </span>
+                        <input type="radio" (click)="incrementoFaltas(jugador)" >
+                        <input type="radio" (click)="incrementoFaltas(jugador)">
+                        <input type="radio" (click)="incrementoFaltas(jugador)">
+                        <input type="radio" (click)="incrementoFaltas(jugador)">
+                        <input type="radio" (click)="incrementoFaltas(jugador)">
+                        <span class="numero">{{jugador.faltas + faltaInicial}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="centro">
+                <div id="time-container">
+                    <p id="time">10:00</p>
+                </div>
+                <div id="segundo">
+                    <div id="flecha-izq">
+                        <span class="flecha-izquierda" ></span>
+                    </div>
+                    <div id="time-game">
+                        <span class="tiempo-jugada">TIEMPO JUGADA</span>
+                        <p id="time-gm">24</p>
+                    </div>
+                    <div id="flecha-der">
+                        <span class="flecha-derecha"></span>
+                    </div>
+                </div>
+                <div id="tercero">
+                    <div id="fouls-iz">
+                        <p class="fouls-equipo">0</p>
+                        <span class="fouls-falta1">FOULS EQUIPO</span>
+                    </div>
+                    <div id="periodo">
+                        <p class="tiempo-periodo">1</p>
+                        <span class="peperiodo">PERIODO</span>
+                    </div>
+                    <div id="fouls-der">
+                        <p class="fouls-equipo">0</p>
+                        <span class="fouls-falta2">FOULS EQUIPO</span>
+                    </div>
+                </div>
+                <div id="cuarto">
+                    <button>Panel de control</button>
+                </div>
+            </div>
+            <div id="derecha">
+                <h1>Visita</h1>
+                <h5>BOSTON COLLEGE</h5>
+                <p class="num" (click)="incrementoPunto('visita')" >{{puntuacionVisita}}</p>
+                <br>
+                <ul id="lista-jugadores">
+                    <li class="jugador" *ngFor="let jugador of jugadores2">
+                        <span class="etiqueta">{{jugador.nombre}} </span>
+                        <input type="radio" (click)="incrementoFaltas(jugador)">
+                        <input type="radio" (click)="incrementoFaltas(jugador)">
+                        <input type="radio" (click)="incrementoFaltas(jugador)">
+                        <input type="radio" (click)="incrementoFaltas(jugador)">
+                        <input type="radio" (click)="incrementoFaltas(jugador)">
+                        <span class="numero">{{jugador.faltas + faltaInicial}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+  
