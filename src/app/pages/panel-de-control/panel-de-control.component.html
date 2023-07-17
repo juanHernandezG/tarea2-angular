@@ -6,8 +6,9 @@
   <div id="botones" class="col-md-4">
     <div>
       <h2>BUZEER</h2>
-      <button id="alarmabtn" type="button" class="btn btn-secondary btn-lg rounded-0"
-      style="--bs-btn-padding-y: 3rem; --bs-btn-padding-x: 12rem; --bs-btn-font-size: 2rem;">Alarma</button>
+      <button id="alarmabtn" type="button" class="btn btn-secondary btn-lg rounded-0" (click)="reproducirSonido()"
+      style="--bs-btn-padding-y: 3rem; --bs-btn-padding-x: 12rem; --bs-btn-font-size: 2rem;">{{ sonidoReproduciendo ? 'Detener sonido' : 'ALARMA' }}</button>
+
     </div>
 
     <br>
@@ -60,6 +61,14 @@
   <div class="col-md-4">
     <h1>PUNTUACION LOCAL</h1>
     <h2>ABA ANCUD</h2>
+
+    <div>
+      <ul id="lista-jugadores">
+        <li class="jugador" *ngFor="let jugador of jugadores1">
+            <span class="etiqueta" style="color: white;">{{jugador.nombre}} </span>
+        </li>
+    </ul>
+    </div>
   </div>
 
   <div class="col-md-4">
@@ -67,6 +76,14 @@
         <button id="configuracion" type="button" class="btn btn-secondary btn-md rounded-0">Configuracion</button>
       </h1>
       <h2>BOSTON COLLEGE</h2>
+
+      <div>
+        <ul id="lista-jugadores">
+          <li class="jugador" *ngFor="let jugador of jugadores2">
+              <span class="etiqueta" style="color: white;">{{jugador.nombre}} </span>
+          </li>
+      </ul>
+      </div>
   </div>
 
 
