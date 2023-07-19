@@ -7,7 +7,7 @@
     <div>
       <h2>BUZEER</h2>
       <button id="alarmabtn" type="button" class="btn btn-secondary btn-lg rounded-0" (click)="reproducirSonido()"
-      style="--bs-btn-padding-y: 3rem; --bs-btn-padding-x: 12rem; --bs-btn-font-size: 2rem;">{{ sonidoReproduciendo ? 'Detener sonido' : 'ALARMA' }}</button>
+      style="--bs-btn-padding-y: 5%; --bs-btn-padding-x: 25%; --bs-btn-font-size: 2rem;">Alarma</button>
 
     </div>
 
@@ -58,20 +58,46 @@
       </select>
     </div>
   </div>
-  <div class="col-md-4">
+  <div id="local" class="col-md-4">
     <h1>PUNTUACION LOCAL</h1>
     <h2>ABA ANCUD</h2>
 
     <div>
       <ul id="lista-jugadores">
-        <li class="jugador" *ngFor="let jugador of jugadores1">
-            <span class="etiqueta" style="color: white;">{{jugador.nombre}} </span>
-        </li>
+        <table style="border-collapse: separate; border-spacing: 10px;">
+          <thead>
+            <tr>
+              <th style="color: white;">Jugador</th>
+              <th style="color: white;">Suma puntos</th>
+              <th style="color: white;">Resta puntos</th>
+              <th style="color: white;">Faltas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let jugador of jugadores1">
+              <td style="color: white;">{{ jugador.nombre }}</td>
+              <td>
+                <button style="background-color: #bf6c26;">+1</button>
+                <button style="background-color: #bf6c26;">+2</button>
+                <button style="background-color: #bf6c26;">+3</button>
+              </td>
+              <td>
+                <button style="background-color: #bf6c26;">-1</button>
+                <button style="background-color: #bf6c26;">-2</button>
+                <button style="background-color: #bf6c26;">-3</button>
+              </td>
+              <td>
+                <button style="background-color: #eb4825;">+1</button>
+                <button style="background-color: #eb4825;">-1</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
     </ul>
     </div>
   </div>
 
-  <div class="col-md-4">
+  <div id="visita" class="col-md-4">
       <h1>PUNTUACION VISITA
         <button id="configuracion" type="button" class="btn btn-secondary btn-md rounded-0">Configuracion</button>
       </h1>
@@ -79,9 +105,35 @@
 
       <div>
         <ul id="lista-jugadores">
-          <li class="jugador" *ngFor="let jugador of jugadores2">
-              <span class="etiqueta" style="color: white;">{{jugador.nombre}} </span>
-          </li>
+              <table style="border-collapse: separate; border-spacing: 10px;">
+                <thead>
+                  <tr>
+                    <th style="color: white;">Jugador</th>
+                    <th style="color: white;">Suma puntos</th>
+                    <th style="color: white;">Resta puntos</th>
+                    <th style="color: white;">Faltas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let jugador of jugadores1">
+                    <td style="color: white;">{{ jugador.nombre }}</td>
+                    <td>
+                      <button style="background-color: #bf6c26;">+1</button>
+                      <button style="background-color: #bf6c26;">+2</button>
+                      <button style="background-color: #bf6c26;">+3</button>
+                    </td>
+                    <td>
+                      <button style="background-color: #bf6c26;">-1</button>
+                      <button style="background-color: #bf6c26;">-2</button>
+                      <button style="background-color: #bf6c26;">-3</button>
+                    </td>
+                    <td>
+                      <button style="background-color: #eb4825;">+1</button>
+                      <button style="background-color: #eb4825;">-1</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
       </ul>
       </div>
   </div>
