@@ -39,14 +39,14 @@ export class MarcadorComponent {
     });
 
   }
-
+/*
   incrementoPunto(equipo: string) {
     if(equipo == 'local'){
       this.puntuacionLocal++;
     }else if(equipo == 'visita'){
       this.puntuacionVisita++;
     }
-  }
+  }*/
 
   jugadores1: Jugador[] = [
     {nombre: 'C. FLORES', faltas:0},
