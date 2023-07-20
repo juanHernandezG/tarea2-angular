@@ -85,7 +85,9 @@ export class PanelDeControlComponent {
     }
 
 
-
+    setArrowDirection(direction: 'left' | 'right'){
+      this.servicio.setArrowDirection(direction);
+    }
 }
 
 

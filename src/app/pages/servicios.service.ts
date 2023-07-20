@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subscription, interval } from 'rxjs';
+import { BehaviorSubject, Subscription, interval, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,13 @@ export class ServiciosService {
 
   faltasLocal$ = this.faltasLocalSubject.asObservable();
   faltasVisita$ = this.faltasVisitaSubject.asObservable();
+
+  private arrowSubject = new Subject<string>();
+  arrowChange$ = this.arrowSubject.asObservable();
+
+  setArrowDirection(directcion: 'left' | 'right'){
+    this.arrowSubject.next(directcion);
+  }
 
   aumentarPuntuacionLocal(puntos: number) {
     this.puntuacionLocalSubject.next(this.puntuacionLocalSubject.value + puntos);

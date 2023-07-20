@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ignoreElements } from 'rxjs';
+import { ignoreElements, Subscription } from 'rxjs';
 import { ServiciosService } from '../servicios.service';
 
 //Se crea un interface de Jugardor para usarlo despues en
@@ -29,7 +29,8 @@ export class MarcadorComponent {
   faltaVisita: number = 0;
   displayTime: string = '10:00';
 
-
+  arrowDirection: string | undefined;
+  private subscription: Subscription | undefined;
 
   constructor(private servicio: ServiciosService){
 
@@ -49,9 +50,17 @@ export class MarcadorComponent {
       this.faltaVisita = faltaVisita;
     });
 
+    this.subscription = this.servicio.arrowChange$.subscribe((direction) =>{
+      this.arrowDirection = direction;
+    });
 
 
   }
+ngOnDestroy(): void {
+  //Called once, before the instance is destroyed.
+  //Add 'implements OnDestroy' to the class.
+}
+
 /*
   incrementoPunto(equipo: string) {
     if(equipo == 'local'){

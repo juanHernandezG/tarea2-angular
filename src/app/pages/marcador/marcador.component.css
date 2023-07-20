@@ -297,22 +297,9 @@ input[ype="radio"]{
     border: 1px solid #5e6063;
 }  
 
-#flecha-izq{
-    background-image: url('../../../assets/img/flechaizquierdaoscuro.png');
-    width: 10px;
-    height: 175px;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 10px;
-}
-  
-#flecha-der{
-    background-image: url('../../../assets/img/flechaderechaoscuro.png');
-    width: 10px;
-    height: 175px;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 10px;
+.flecha{
+    width: 160px;
+    height: 160px;
 }
 
 
