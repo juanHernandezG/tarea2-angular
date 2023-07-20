@@ -87,8 +87,8 @@
                 <button (click)="aumentarPuntuacionLocal(-3)"style="background-color: #bf6c26;">-3</button>
               </td>
               <td>
-                <button style="background-color: #eb4825;">+1</button>
-                <button style="background-color: #eb4825;">-1</button>
+                <button (click)="aumentarFaltasLocal(1)" style="background-color: #eb4825;">+1</button>
+                <button (click)="aumentarFaltasLocal(-1)" style="background-color: #eb4825;">-1</button>
               </td>
             </tr>
           </tbody>
@@ -128,8 +128,8 @@
                       <button (click)="aumentarPuntuacionVisita(-3)" style="background-color: #bf6c26;">-3</button>
                     </td>
                     <td>
-                      <button style="background-color: #eb4825;">+1</button>
-                      <button style="background-color: #eb4825;">-1</button>
+                      <button (click)="aumentarFaltasVisita(1)" style="background-color: #eb4825;">+1</button>
+                      <button (click)="aumentarFaltasVisita(-1)" style="background-color: #eb4825;">-1</button>
                     </td>
                   </tr>
                 </tbody>

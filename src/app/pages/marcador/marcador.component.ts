@@ -24,6 +24,9 @@ export class MarcadorComponent {
   //puntuaciones local y visita
   puntuacionLocal: number = 0;
   puntuacionVisita: number = 0;
+
+  faltaLocal: number = 0;
+  faltaVisita: number = 0;
   displayTime: string = '10:00';
 
 
@@ -37,6 +40,16 @@ export class MarcadorComponent {
     this.servicio.puntuacionVisita$.subscribe(puntuacionVisita => {
       this.puntuacionVisita = puntuacionVisita;
     });
+
+    this.servicio.faltasLocal$.subscribe(faltaLocal => {
+      this.faltaLocal = faltaLocal;
+    });
+
+    this.servicio.faltasVisita$.subscribe(faltaVisita => {
+      this.faltaVisita = faltaVisita;
+    });
+
+
 
   }
 /*

@@ -30,6 +30,14 @@ export class PanelDeControlComponent {
       this.servicio.aumentarPuntuacionVisita(puntos);
     }
 
+    aumentarFaltasLocal(puntos: number){
+      this.servicio.aumentarFaltaLocal(puntos);
+    }
+
+    aumentarFaltasVisita(puntos: number){
+      this.servicio.aumentarFaltaVisita(puntos);
+    }
+
 
 
 
