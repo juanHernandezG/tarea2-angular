@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { ignoreElements } from 'rxjs';
+import { ServiciosService } from '../servicios.service';
 
-//Se crea un interface de Jugardor para usarlo despues en 
+//Se crea un interface de Jugardor para usarlo despues en
 //el tema de las faltas cometidas
 interface Jugador{
   nombre: string;
@@ -23,10 +24,19 @@ export class MarcadorComponent {
   //puntuaciones local y visita
   puntuacionLocal: number = 0;
   puntuacionVisita: number = 0;
+  displayTime: string = '10:00';
 
 
 
-  constructor(){
+  constructor(private servicio: ServiciosService){
+
+    this.servicio.puntuacionLocal$.subscribe(puntuacionLocal => {
+      this.puntuacionLocal = puntuacionLocal;
+    });
+
+    this.servicio.puntuacionVisita$.subscribe(puntuacionVisita => {
+      this.puntuacionVisita = puntuacionVisita;
+    });
 
   }
 

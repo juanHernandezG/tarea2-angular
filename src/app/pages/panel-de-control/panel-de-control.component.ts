@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiciosService } from '../servicios.service';
 
 interface Jugador{
   nombre: string;
@@ -14,11 +15,24 @@ export class PanelDeControlComponent {
 
     audio: HTMLAudioElement;
     sonidoReproduciendo: boolean = false;
-  
-    constructor() {
+
+    constructor(private servicio: ServiciosService) {
       this.audio = new Audio();
       this.audio.src = 'assets/buzzer.mp3';
+
     }
+
+    aumentarPuntuacionLocal(puntos: number) {
+      this.servicio.aumentarPuntuacionLocal(puntos);
+    }
+
+    aumentarPuntuacionVisita(puntos: number) {
+      this.servicio.aumentarPuntuacionVisita(puntos);
+    }
+
+
+
+
 
     jugadores1: Jugador[] = [
       {nombre: 'C. FLORES', faltas:0},
@@ -35,7 +49,7 @@ export class PanelDeControlComponent {
         {nombre: 'I. SEPULVEDA',faltas:0},
         {nombre: 'R. BELLO',faltas:0}
     ];
-  
+
     jugadores2: Jugador[] = [
       {nombre: 'C. LIZANA', faltas:0},
         {nombre: 'C. LOPEZ',faltas:0},
@@ -51,7 +65,7 @@ export class PanelDeControlComponent {
         {nombre: 'R. JAMARILLO',faltas:0},
         {nombre: 'S. VILLEGAS',faltas:0}
     ];
-  
+
     reproducirSonido() {
       if (this.sonidoReproduciendo) {
         this.audio.pause(); // Detener la reproducción
@@ -61,7 +75,9 @@ export class PanelDeControlComponent {
         this.sonidoReproduciendo = true;
       }
     }
-  
-  
+
+
 
 }
+
+

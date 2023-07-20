@@ -77,14 +77,14 @@
             <tr *ngFor="let jugador of jugadores1">
               <td style="color: white;">{{ jugador.nombre }}</td>
               <td>
-                <button style="background-color: #bf6c26;">+1</button>
-                <button style="background-color: #bf6c26;">+2</button>
-                <button style="background-color: #bf6c26;">+3</button>
+                <button (click)="aumentarPuntuacionLocal(1)" style="background-color: #bf6c26;">+1</button>
+                <button (click)="aumentarPuntuacionLocal(2)" style="background-color: #bf6c26;">+2</button>
+                <button (click)="aumentarPuntuacionLocal(3)" style="background-color: #bf6c26;">+3</button>
               </td>
               <td>
-                <button style="background-color: #bf6c26;">-1</button>
-                <button style="background-color: #bf6c26;">-2</button>
-                <button style="background-color: #bf6c26;">-3</button>
+                <button (click)="aumentarPuntuacionLocal(-1)" style="background-color: #bf6c26;">-1</button>
+                <button (click)="aumentarPuntuacionLocal(-2)" style="background-color: #bf6c26;">-2</button>
+                <button (click)="aumentarPuntuacionLocal(-3)"style="background-color: #bf6c26;">-3</button>
               </td>
               <td>
                 <button style="background-color: #eb4825;">+1</button>
@@ -118,14 +118,14 @@
                   <tr *ngFor="let jugador of jugadores1">
                     <td style="color: white;">{{ jugador.nombre }}</td>
                     <td>
-                      <button style="background-color: #bf6c26;">+1</button>
-                      <button style="background-color: #bf6c26;">+2</button>
-                      <button style="background-color: #bf6c26;">+3</button>
+                      <button (click)="aumentarPuntuacionVisita(1)" style="background-color: #bf6c26;">+1</button>
+                      <button (click)="aumentarPuntuacionVisita(2)" style="background-color: #bf6c26;">+2</button>
+                      <button (click)="aumentarPuntuacionVisita(3)" style="background-color: #bf6c26;">+3</button>
                     </td>
                     <td>
-                      <button style="background-color: #bf6c26;">-1</button>
-                      <button style="background-color: #bf6c26;">-2</button>
-                      <button style="background-color: #bf6c26;">-3</button>
+                      <button (click)="aumentarPuntuacionVisita(-1)" style="background-color: #bf6c26;">-1</button>
+                      <button (click)="aumentarPuntuacionVisita(-2)" style="background-color: #bf6c26;">-2</button>
+                      <button (click)="aumentarPuntuacionVisita(-3)" style="background-color: #bf6c26;">-3</button>
                     </td>
                     <td>
                       <button style="background-color: #eb4825;">+1</button>
